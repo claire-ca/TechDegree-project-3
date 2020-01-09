@@ -1,6 +1,201 @@
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+}
+
+/* Base Styles */
+
+body {
+    color: lightslategray;
+    font-family: 'Gelasio', serif;
+    font-size: 16px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+header {
+    text-align: center;
+}
+
+main {
+    margin-top: 2px;
+    border-top: 2px solid #1b3661;;
+}
+
+fieldset {
+    border: none;
+}
+
+legend {
+    color: #1b3661;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+input {
+    text-indent: 1em;
+}
+
+input[type=checkbox],
+input[type=radio] {
+    margin-right: 1em;
+}
+
+select {
+    text-indent: 0.5em;
+    color: rgb(182, 181, 181)!important;
+}
+
+textarea {
+    height: 100px;
+    padding: 1em 0;
+    background-color: #fff;
+    text-indent: 1em;
+}
+
+::placeholder {
+    color: rgb(182, 181, 181);
+    padding-right: 1em;
+}
+
+footer {
+    font-size: 0.9em;
+    font-style: italic;
+    text-align: center;
+    padding: 2em 0;
+}
+
+/* LAYOUT STYLES */
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.page-title {
+    background-color: #1b3661;
+    color: #fff;
+    padding: 1em 0;
+    text-transform: uppercase;
+}
+
+.intro {
+    padding: 2em 0;
+    border-bottom: 3px solid #1b3661;;
+}
+
+.intro h2 {
+    color: #1b3661;
+    margin-bottom: 0.5em;
+}
+
+.contact-info {
+    border-bottom: 2px solid #1b3661;;
+    padding: 1.5em 0;
+}
+
+.contact-info legend,
+.newsletter legend {
+    padding-top: 1.5em;
+}
+
+.contact-info input,
+.contact-info select,
+textarea {
+    background-color: #EFEFEF;
+    border-radius: 5px;
+    border-color: transparent;
+    color: slategrey;
+    display: block;
+    font-size: 0.85em;
+    width: 100%;
+    margin: 1em 0 1.5em; 
+    transition: background-color ease-in 0.5s;
+}
+
+.contact-info input,
+.contact-info select {
+    height: 50px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border: 2px solid #1b3661;
+}
+
+input:focus,
+select:focus {
+    background-color: rgba(27,54,97,0.2);
+}
+
+textarea:focus {
+    background-color: #fff;
+}
+
+.required-fields::placeholder {
+    text-align: right;
+    font-style: italic;
+}
+
+#zip {
+    width: 50%;
+}
+
+.bg-color {
+    background-color: rgba(27,54,97,0.15);
+}
+
+.newsletter legend {
+    margin-bottom: 1.25em;
+}
+
+.newsletter-labels {
+    display: inline-block;
+    margin-bottom: 0.5em;
+}
+
+.newsletter-labels:not(:first-of-type){
+    margin-top: 2em;
+}
+
+.group{
+    padding: 0.5em;
+}
+
+.sign-up-btn {
+    background-color: #30c2c9;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
     font-family: 'Merriweather', serif;
+    font-size: 1.2em;
+    margin-top: 0.3em;
+    padding: 1em 0;
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 1000px;
+    }
+    .flex {
+        display: flex;
+        align-items: center;
+    }
+    .flex label {
+        flex: 1;
+    }
+    .flex input,
+    .flex select {
+        flex: 4;
+    }
+    .flex #zip {
+        flex: 1.5;
+    }
+    .zip-code {
+        width: 50%;
+    }
 }
